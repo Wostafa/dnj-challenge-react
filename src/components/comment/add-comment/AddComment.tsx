@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import style from './add-comment.module.scss';
 import { useAppSelector } from '../../../store/hooks';
 import { selectUser } from '../../../store/user-slice';
-import ProfilePhoto from '../../profile-photo/ProfilePhoto';
+import ProfilePhoto from '../../profile-photo';
 import { Send } from '../../../icons';
 import type { IDiscussion, IComment } from '../../../types';
 import { useAppDispatch } from '../../../store/hooks';

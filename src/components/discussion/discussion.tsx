@@ -1,7 +1,7 @@
 import React from 'react';
-import AddComment from '../comment/add-comment/';
+import AddComment from '../comment/add-comment';
 import style from './discussion.module.scss';
-import CommentList from '../comment/comment-list/CommentList';
+import CommentList from '../comment/comment-list';
 
 export default function Discussion() {
   return (

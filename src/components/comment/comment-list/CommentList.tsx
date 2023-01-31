@@ -1,6 +1,6 @@
 import React from 'react';
 import style from './comment-list.module.scss';
-import CommentItem from '../comment-item/CommentItem';
+import CommentItem from '../comment-item';
 import { useAppSelector } from '../../../store/hooks';
 import { selectComments } from '../../../store/comment-slice';
 

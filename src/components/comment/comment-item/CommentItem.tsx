@@ -1,8 +1,8 @@
 import React, { useMemo, useState } from 'react';
 import style from './comment-item.module.scss';
 import type { IDiscussion, IComment } from '../../../types';
-import AddComment from '../add-comment/AddComment';
-import ProfilePhoto from '../../profile-photo/ProfilePhoto';
+import AddComment from '../add-comment';
+import ProfilePhoto from '../../profile-photo';
 import moment from 'moment';
 import { useAppDispatch } from '../../../store/hooks';
 import { ThumbUp } from '../../../icons';

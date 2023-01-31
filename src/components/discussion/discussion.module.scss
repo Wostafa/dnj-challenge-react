@@ -1,19 +1,15 @@
 @import '../../styles/variables';
 
-@mixin box {
-  border-radius: 8px;
-}
 .wrapper {
   width: 600px;
-
   .add_comment {
-    @include box;
+    border-radius: 8px;
     padding: 24px;
     background-color: #fafbfc;
   }
 
   .comment_list {
-    @include box;
+    border-radius: 8px;
     margin-top: 4px;
     background-color: white;
   }
