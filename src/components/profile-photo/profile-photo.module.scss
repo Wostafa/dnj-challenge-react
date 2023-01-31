@@ -1,0 +1,26 @@
+@import '../../styles/variables';
+
+.wrapper {
+  width: $profile-picture-size;
+  height: $profile-picture-size;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $c-sky-100;
+  border-radius: 50%;
+  overflow: hidden;
+
+  .nickname {
+    text-transform: uppercase;
+    font-weight: 600;
+    color: $c-blue-500;
+  }
+
+  img {
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+  }
+}

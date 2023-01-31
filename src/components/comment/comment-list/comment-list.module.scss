@@ -1,0 +1,36 @@
+@import '../../../styles//variables';
+
+.wrapper {
+  margin-top: 4px;
+  background-color: white;
+  border-radius: 8px;
+}
+
+.item {
+  padding: 24px;
+
+  &:not(:last-of-type) {
+    border-bottom: 2px solid $c-gray-200;
+  }
+}
+
+.comment {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  &.has_reply::before {
+    content: '';
+    height: calc(100% - $profile-picture-size - 10px);
+    width: 2px;
+    background-color: $c-gray-200;
+    position: absolute;
+    left: calc($profile-picture-size / 2);
+    bottom: 0;
+  }
+}
+
+.reply {
+  margin-left: 64px;
+  margin-top: 16px;
+}

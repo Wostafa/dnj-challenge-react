@@ -1,0 +1,73 @@
+@import '../../../styles/variables';
+.item {
+  display: flex;
+  gap: 16px;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .name_date {
+    display: flex;
+    gap: 8px;
+    align-items: baseline;
+
+    h3 {
+      font-weight: 600;
+    }
+
+    time {
+      color: $c-gray-400;
+    }
+  }
+
+  .buttons {
+    display: flex;
+    gap: 12px;
+    $background: $c-gray-100;
+    $color-blue: $c-blue-500;
+
+    .like {
+      background-color: $background;
+      fill: $c-slate-400;
+      color: $c-text;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+
+      &.liked {
+        background-color: $color-blue;
+        color: white;
+        fill: white;
+      }
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    .reply {
+      color: $color-blue;
+      font-weight: 700;
+      background: none;
+
+      &:hover {
+        background-color: $background;
+      }
+    }
+
+    button {
+      width: fit-content;
+      border-radius: 12px;
+      padding: 4px 10px;
+    }
+  }
+
+  .add_comment {
+    margin-left: 64px;
+    margin-top: 16px;
+  }
+}

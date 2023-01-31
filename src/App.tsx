@@ -1,7 +1,8 @@
 import React from 'react';
+import Discussion from './components/discussion';
 
 function App() {
-  return <h1>test</h1>;
+  return <Discussion />;
 }
 
 export default App;
