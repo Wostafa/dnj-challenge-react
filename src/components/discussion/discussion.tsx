@@ -6,7 +6,7 @@ import CommentList from '../comment/comment-list/CommentList';
 export default function Discussion() {
   return (
     <div className={style.wrapper}>
-      <AddComment placeholder='Start a discussion' targetId={undefined} />
+      <AddComment placeholder='Start a discussion' targetId={undefined} className={style.add_comment} />
       <CommentList />
     </div>
   );

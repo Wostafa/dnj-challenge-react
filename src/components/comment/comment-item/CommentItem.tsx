@@ -11,7 +11,7 @@ import { likeOrUnlike } from '../../../store/comment-slice';
 interface Props {
   className: string;
   comment: IDiscussion | IComment;
-  children?: JSX.Element;
+  children?: JSX.Element[];
 }
 
 export default function CommentItem({ comment, className, children }: Props) {
@@ -19,19 +19,18 @@ export default function CommentItem({ comment, className, children }: Props) {
   const [showReply, setShowReply] = useState(false);
 
   const dateFromNow = useMemo(() => moment(new Date(comment.date)).fromNow(), [comment.date]);
-
   const exactDate = useMemo(() => moment(new Date(comment.date)).format('MMMM Do YYYY, h:mm:ss a'), [comment.date]);
 
   const onLikeOrUnlike = () => {
     dispatch(likeOrUnlike(comment.id));
   };
 
-  const onReply = () => {
+  const onShowReply = () => {
     setShowReply(!showReply);
   };
 
   return (
-    <div>
+    <div className={className}>
       <div className={style.item}>
         <ProfilePhoto user={comment.user} />
         <div className={style.content}>
@@ -46,7 +45,7 @@ export default function CommentItem({ comment, className, children }: Props) {
               <strong>{comment.likes}</strong>
             </button>
             {'replies' in comment && (
-              <button className={style.reply} onClick={onReply}>
+              <button className={style.reply} onClick={onShowReply}>
                 Reply
               </button>
             )}
@@ -54,12 +53,7 @@ export default function CommentItem({ comment, className, children }: Props) {
         </div>
       </div>
       {children}
-      {/* <AddComment
-      v-if="showReply"
-      placeholder="Reply"
-      class="add-comment"
-      :target-id="comment.id"
-    /> */}
+      {showReply && <AddComment placeholder='Reply' className={style.add_comment} targetId={comment.id} />}
     </div>
   );
 }
