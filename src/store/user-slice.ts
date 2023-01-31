@@ -5,9 +5,7 @@ import type { RootState } from './store';
 export const userSlice = createSlice({
   name: 'user',
   initialState: currentUser,
-  reducers: {
-    getUser: () => {},
-  },
+  reducers: {},
 });
 
 export const selectUser = (state: RootState) => state.user;

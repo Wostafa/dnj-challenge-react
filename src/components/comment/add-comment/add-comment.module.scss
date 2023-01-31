@@ -3,6 +3,7 @@
 .wrapper {
   display: flex;
   gap: 16px;
+  align-items: center;
 
   textarea {
     border-radius: 6px;
@@ -11,8 +12,8 @@
     outline: 0;
     width: 100%;
     resize: vertical;
-    min-height: 45px;
-    height: 45px;
+    min-height: 46px;
+    height: 46px;
     color: $c-text;
 
     &:focus {
@@ -29,7 +30,7 @@
     border-radius: 6px;
     padding-left: 10px;
     padding-right: 10px;
-    fill: $c-slate-400;
+    fill: $c-slate-500;
     height: 45px;
     background-color: $c-gray-100;
     margin-left: -8px;

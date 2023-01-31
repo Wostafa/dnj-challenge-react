@@ -47,7 +47,7 @@ export default function AddComment({ placeholder, targetId, className }: Props) 
   return (
     <div className={[style.wrapper, className].join(' ')}>
       <ProfilePhoto user={user} />
-      <textarea placeholder={placeholder} onChange={onTextareaChange} />
+      <textarea value={textarea} placeholder={placeholder} onChange={onTextareaChange} />
       <button title='send' onClick={onAddComment}>
         <Send />
       </button>
